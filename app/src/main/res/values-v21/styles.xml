@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 全屏显示，无状态栏 -->
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 启动页设置全屏 -->
+    <style name="AppTheme.NoActionBar.NoActionBarLaunch"  parent="Theme.AppCompat.NoActionBar">
+        <!-- values-v21中的styles.xml中，windowFullscreen windowTranslucentNavigation windowTranslucentStatus 这些属性都不要设置，
+        设置了反而会适得其反。比如设置了windowTranslucentNavigation windowTranslucentStatus，反而会有一层浅灰色的背景，直接设置navigationBarColor颜色为透明即可；
+        设置windowFullscreen在vivo刘海屏手机、Nexus 5X刘海屏手机上，状态栏为黑色 -->
+        <item name="android:windowBackground">@drawable/mainbg1</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+
+
+    <!-- 全屏显示，带有透明的状态栏 -->
+    <style name="StatusBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/main_bg</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

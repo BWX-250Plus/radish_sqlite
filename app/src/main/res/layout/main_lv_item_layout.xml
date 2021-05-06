@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/equipment_lv_selector"
+    android:paddingTop="10dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/iv_equipment_icon"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_equipment"/>
+
+    <LinearLayout
+        android:id="@+id/layout_text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/iv_equipment_icon"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/tv_equipment_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="卧室-吸顶灯"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:textColor="@color/account_gray_color"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_equipment_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID：78707878090"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_gray"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_equipment_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="状态：离线"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_gray"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_equipment_THumidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="温度：--℃ 湿度：--%"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_gray"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ibtn_equipment_switch"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        android:scaleType="fitCenter"
+        android:clickable="true"
+        android:src="@drawable/power_close"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray"
+        android:layout_below="@id/layout_text_content"/>
+
+
+</RelativeLayout>
